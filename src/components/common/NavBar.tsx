@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { NAVBAR_DATA_LIST } from "@/utils/helper";
 import { usePathname } from "next/navigation";
 import Cta from "../custom-ui/Cta";
@@ -27,8 +28,15 @@ const NavBar = () => {
     };
   }, [isOpen]);
 
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+        once: true,    
+      });
+    }, []);
+
   return (
-    <div className="py-2 sm:py-[17px] w-full relative !z-50">
+    <div data-aos="fade-down" className="py-2 sm:py-[17px] w-full relative !z-50">
       <div className="container max-w-[1200px] mx-auto sm:px-[30px] px-4">
         <div className="flex items-center justify-between">
           <Link href="/">

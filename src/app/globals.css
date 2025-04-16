@@ -15,6 +15,7 @@ body{
   --color-mix-black: #0C0C0C;
   --color-orange: #e58e1a;
   --color-grey: #E5E5E5;
+  --color-light-grey: #D9D9D9;
   --color-off-grey: #E5E5E529;
   --color-red: #C8102E;
   --color-charcoal: #4A4A4A;
@@ -38,4 +39,13 @@ body{
 }
 .clip-angled {
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-red);
 }

@@ -14,9 +14,9 @@ interface CtaProps {
 }
 
 const buttonType = {
-  default: "!font-display font-semibold text-sm sm:text-base !leading-125 capitalize bg-red sm:px-5 px-4 sm:py-[18px] py-3 transition-all duration-300 ease-linear cursor-pointer hover:bg-grey hover:text-red text-grey hover:scale-105 hover:brightness-110 hover:shadow-3xl",
+  default: "!font-display font-semibold text-sm sm:text-base !leading-125 capitalize bg-red sm:px-5 px-4 md:h-[56px] h-[44px] sm:h-[49px] transition-all duration-300 ease-linear cursor-pointer hover:bg-grey hover:text-red text-grey hover:scale-105 hover:brightness-110 hover:shadow-3xl",
 
-  redShadow:`!font-display font-semibold text-sm sm:text-base capitalize hover:bg-grey bg-red hover:text-red text-grey md:px-6 px-5  transition-all duration-300 ease-linear cursor-pointer shadow-3xl md:h-[68px] h-[49px] text-nowrap max-w-[189px] hover:scale-105 hover:brightness-110`,
+  redShadow:`!font-display font-semibold text-sm sm:text-base capitalize hover:bg-grey bg-red hover:text-red text-grey md:px-6 px-5  transition-all duration-300 ease-linear cursor-pointer shadow-3xl md:h-[68px] sm:h-[49px] h-[44px] text-nowrap max-w-[189px] hover:scale-105 hover:brightness-110`,
 
   disabled: "opacity-50 cursor-not-allowed",
 };

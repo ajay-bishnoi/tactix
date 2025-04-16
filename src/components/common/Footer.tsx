@@ -1,13 +1,26 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Cta from "../custom-ui/Cta";
 import Icons from "./Icon";
 import { FOOTER_ICONS_LIST } from "@/utils/helper";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="bg-cover bg-no-repeat bg-center bg-[url('/assets/images/webp/footer-bg.webp')] xl:pt-[99px] md:pt-20 pt-14 pb-8">
+    <div
+      data-aos="zoom-in"
+      className="bg-cover bg-no-repeat bg-center bg-[url('/assets/images/webp/footer-bg.webp')] xl:pt-[99px] md:pt-20 pt-14 pb-8"
+    >
       <div className="container max-w-[1200px] mx-auto sm:px-[30px] px-6">
         <div className="flex flex-col gap-10">
           <div className="flex items-center md:flex-row flex-col flex-wrap justify-between gap-6">
@@ -21,15 +34,15 @@ const Footer = () => {
               />
             </Link>
             <div className="flex flex-col gap-5 ">
-              <div className="flex sm:flex-row flex-col gap-5 w-full sm:max-w-[585px] max-w-[340px] mx-auto">
+              <div className="flex sm:flex-row flex-col gap-3 sm:gap-5 w-full sm:max-w-[585px] max-w-[240px] mx-auto">
                 <input
                   type="email"
                   placeholder="Enter Email"
-                  className="max-w-[376px] w-full border outline-0 border-red md:p-6 p-4 bg-charcoal text-grey placeholder:text-grey font-medium text-base !leading-100"
+                  className="sm:max-w-[376px] max-w-[240px] w-full border outline-0 border-red md:p-6 sm:p-4 p-3 mx-auto bg-charcoal text-grey placeholder:text-grey font-medium text-base !leading-100"
                 />
                 <Cta
                   scroll={false}
-                  className="w-fit mx-auto"
+                  className="sm:w-fit mx-auto max-sm:max-w-full w-full"
                   variant="redShadow"
                 >
                   Lock In My Spot
@@ -69,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col gap-[22px] md:items-start items-center lg:hidden">
-            <p className="font-display font-normal text-lg !leading-100 tracking-[0.04em] uppercase text-grey text-start">
+            <p className="font-display font-normal sm:text-lg text-base !leading-100 tracking-[0.04em] uppercase text-grey text-start">
               Join the Tactix Crew
             </p>
             <div className="flex gap-4">
@@ -91,7 +104,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="!font-display font-normal text-base !leading-125 tracking-[0.04em] uppercase text-center mt-12 sm:mt-16 md:mt-20 lg:mt-[100px] xl:mt-[126px] text-grey">
+        <p className="!font-display font-normal text-sm sm:text-base !leading-125 tracking-[0.04em] uppercase text-center mt-12 sm:mt-16 lg:mt-20  xl:mt-[126px] text-grey">
           copyright @ 2025 | All rights reserved
         </p>
       </div>

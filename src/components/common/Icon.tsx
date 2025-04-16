@@ -86,7 +86,6 @@ const Icons: React.FC<LoginCardProps> = ({
         />
       </svg>
     ),
-
     backToTop: (
       <svg
         width="50"

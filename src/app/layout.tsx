@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import BackToTop from "@/components/common/BackToTop";
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,12 +16,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
       <body>
         <Header/>
         {children}
         <Footer/>
+        <BackToTop/>
       </body>
     </html>
   );
