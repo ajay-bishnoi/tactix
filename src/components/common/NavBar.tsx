@@ -2,9 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Cta from "../custom-ui/Cta";
+
 import { NAVBAR_DATA_LIST } from "@/utils/helper";
 import { usePathname } from "next/navigation";
+import Cta from "../custom-ui/Cta";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -63,7 +64,7 @@ const NavBar = () => {
             </ul>
           </div>
             <div className="flex xl:gap-[34px] gap-7 items-center">
-              <Cta className="">
+              <Cta>
               Get Started
               </Cta>
               <button
